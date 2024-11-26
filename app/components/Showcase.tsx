@@ -32,7 +32,7 @@ export default function Showcase() {
                             loop
                             playsInline
                         >
-                            <source src="/REGAI Demo Video.mov" type="video/quicktime" />
+                            <source src="/videos/Demo Video.m4v" type="video/m4v" />
                             Your browser does not support the video tag.
                         </video>
                     </div>

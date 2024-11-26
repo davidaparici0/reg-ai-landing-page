@@ -27,7 +27,7 @@ export default function Header() {
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <Link href="/" className="flex items-center space-x-2">
                     <Image
-                        src="/REGAI Logo.png"
+                        src="/images/REG AI Logo.png"
                         alt="REG AI Logo"
                         width={40}
                         height={40}
