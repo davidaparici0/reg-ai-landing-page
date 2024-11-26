@@ -50,7 +50,7 @@ export default function Pricing() {
                             ))}
                         </ul>
                         <button className="w-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold py-4 px-8 rounded-lg text-lg hover:from-amber-500 hover:to-amber-700 transition-all duration-300">
-                            Start Free Trial
+                            Get Started Now
                         </button>
                     </motion.div>
                 </div>

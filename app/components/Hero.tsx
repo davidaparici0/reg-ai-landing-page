@@ -35,7 +35,7 @@ export default function Hero() {
                             href="#contact"
                             className="inline-block bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold py-4 px-8 rounded-full text-lg hover:from-amber-500 hover:to-amber-700 transition-all duration-300"
                         >
-                            Start Free Trial
+                            Request Demo
                         </Link>
                         <span className="inline-block text-amber-400 mt-4 md:mt-0">
                             Only $50/month per restaurant

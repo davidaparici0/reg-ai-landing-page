@@ -1,59 +1,56 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check } from 'lucide-react'
+import Link from 'next/link'
 
-const features = [
-    "Unlimited AI-powered training sessions",
-    "24/7 staff support",
-    "Custom content creation",
-    "Performance analytics",
-    "Team management tools",
-    "Regular updates and improvements"
-]
-
-export default function Pricing() {
+export default function Showcase() {
     return (
-        <section id="pricing" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <section className="py-20 bg-black">
             <div className="container mx-auto px-6">
                 <motion.div
-                    className="text-center mb-16"
+                    className="text-center mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-playfair mb-4">Simple, Transparent Pricing</h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Start transforming your restaurant's training today
-                    </p>
+                    <h2 className="text-4xl md:text-5xl font-playfair mb-4">Your Operations Demand Smarter Tools—Unlock Exceptional Growth with AI</h2>
                 </motion.div>
-                <div className="max-w-lg mx-auto">
-                    <motion.div
-                        className="bg-gray-900/50 backdrop-blur-lg rounded-lg p-8 border border-amber-400/20"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
+                <motion.div
+                    className="mb-12"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
+                    <div className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden">
+                        <video
+                            className="w-full"
+                            controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src="/REGAI Demo Video.mov" type="video/quicktime" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </motion.div>
+                <motion.div
+                    className="text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    viewport={{ once: true }}
+                >
+                    <Link
+                        href="#contact"
+                        className="inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold py-4 px-12 rounded-full text-lg hover:from-amber-500 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
-                        <div className="text-center mb-8">
-                            <div className="text-amber-400 mb-4">Premium Plan</div>
-                            <div className="text-5xl font-playfair mb-4">$50<span className="text-xl text-gray-400">/month</span></div>
-                            <div className="text-gray-400">per restaurant</div>
-                        </div>
-                        <ul className="space-y-4 mb-8">
-                            {features.map((feature, index) => (
-                                <li key={index} className="flex items-center">
-                                    <Check className="w-5 h-5 text-amber-400 mr-3" />
-                                    <span className="text-gray-300">{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        <button className="w-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold py-4 px-8 rounded-lg text-lg hover:from-amber-500 hover:to-amber-700 transition-all duration-300">
-                            Start Free Trial
-                        </button>
-                    </motion.div>
-                </div>
+                        Request Demo
+                    </Link>
+                </motion.div>
             </div>
         </section>
     )
