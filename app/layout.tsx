@@ -23,7 +23,7 @@ export default function RootLayout({
       lang="en"
       className={`scroll-smooth ${inter.variable} ${playfair.variable}`}
     >
-      <body className="bg-black text-white font-sans">{children}</body>
+      <body className="bg-black text-white font-sans antialiased">{children}</body>
     </html>
   );
 }
