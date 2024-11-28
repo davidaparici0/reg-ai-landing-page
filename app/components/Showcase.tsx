@@ -28,7 +28,7 @@ export default function Showcase() {
         >
           <div className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden">
             <video className="w-full" controls autoPlay muted loop playsInline>
-              <source src="/videos/Demo Video.m4v" type="video/m4v" />
+              <source src="/videos/demo_video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
