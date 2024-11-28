@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -9,6 +9,14 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
+  // Add state to handle client-side rendering
+  const [isClient, setIsClient] = useState(false);
+
+  // Set isClient to true after component mounts
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,6 +35,11 @@ export default function Contact() {
       [name]: value,
     }));
   };
+
+  // Only render the form after client-side hydration is complete
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <section id="contact" className="py-20 bg-black">
